@@ -1,8 +1,12 @@
+{% from "mysql/map.jinja" import mysql with context %}
+
 include:
   - mysql.restart
 
 mysql_server_config:
   file.managed:
-    - name: /etc/my.conf.d/server.cnf
+    - name: {{ mysql.server_conf }}
     - makedirs: True
-    - source: salt://mysql/files/server.cnf
+    - source: {{ mysql.server_conf_source }}
+    - require:
+      - pkg: {{ mysql.server }}
