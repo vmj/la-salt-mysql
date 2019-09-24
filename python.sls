@@ -1,4 +1,4 @@
-{% from "mysql/map.jinja" import apache with context %}
+{% from "mysql/map.jinja" import mysql with context %}
 
 mysql_python_install:
   pkg.install:
