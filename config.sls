@@ -10,3 +10,5 @@ mysql_server_config:
     - source: {{ mysql.server_conf_source }}
     - require:
       - pkg: {{ mysql.server }}
+  pkg.installed:
+    - name: {{ mysql.python_inotify }}

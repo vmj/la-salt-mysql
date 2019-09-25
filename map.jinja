@@ -7,6 +7,7 @@
      'server_conf_source': 'salt://mysql/files/deb_mysqld.cnf',
      'service': 'mysql',
      'python': 'python-pymysql',
+     'python_inotify': 'python-pyinotify',
    },
    'RedHat': {
      'server': 'mariadb-server',
@@ -15,6 +16,7 @@
      'server_conf_source': 'salt:///mysql/files/rh_server.cnf',
      'service': 'mariadb',
      'python': 'MySQL-python',
+     'python_inotify': 'python-inotify',
    },
 
 })%}
